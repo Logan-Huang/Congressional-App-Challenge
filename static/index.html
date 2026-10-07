@@ -4,36 +4,87 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Water Quality Tracker</title>
-  <meta name="description" content="Enter a zip code to see whether your public water system meets federal EPA drinking-water standards.">
+  <meta name="description" content="Enter a zip code or street address to see how your public water system is doing against federal EPA drinking-water rules, explained in plain English.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.5c3.6 4.4 6.5 7.9 6.5 11.6a6.5 6.5 0 0 1-13 0C5.5 10.4 8.4 6.9 12 2.5z' fill='%230b6fa8'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-  <main class="page">
-    <header class="hero">
-      <p class="eyebrow">Water Quality Tracker</p>
-      <h1>Is my tap water meeting federal standards?</h1>
-      <p class="lead">Enter your zip code. We check U.S. EPA records and explain what we find in plain English.</p>
+  <a class="skip-link" href="#results">Skip to results</a>
 
-      <form id="lookup-form" novalidate>
-        <label for="zip">Enter your zip code</label>
-        <div class="row">
-          <input id="zip" name="zip" type="text" inputmode="numeric" pattern="[0-9]*"
-                 maxlength="5" autocomplete="postal-code" placeholder="e.g. 48502"
-                 aria-describedby="zip-error">
-          <button id="submit" type="submit">Check water</button>
+  <header class="hero">
+    <div class="wrap">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c3.6 4.4 6.5 7.9 6.5 11.6a6.5 6.5 0 0 1-13 0C5.5 10.4 8.4 6.9 12 2.5z"/></svg>
+        <span>Water Quality Tracker</span>
+      </div>
+
+      <h1>Is the water at your tap<br class="wide-only"> meeting federal standards?</h1>
+      <p class="lead">Search your zip code or street address. We read U.S. EPA records and explain what they say in plain English.</p>
+
+      <form id="lookup-form" class="search" novalidate>
+        <fieldset class="toggle" aria-label="Search by">
+          <legend class="sr-only">Search by</legend>
+          <input type="radio" name="mode" id="mode-zip" value="zip" checked>
+          <label for="mode-zip">Zip code</label>
+          <input type="radio" name="mode" id="mode-address" value="address">
+          <label for="mode-address">Street address</label>
+        </fieldset>
+
+        <label id="q-label" class="sr-only" for="q">Enter your zip code</label>
+        <div class="search-row">
+          <input id="q" name="q" type="text" inputmode="numeric" maxlength="5" autocomplete="postal-code"
+                 placeholder="Enter a 5-digit zip code" aria-describedby="q-error" enterkeyhint="search">
+          <button id="submit" type="submit">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg>
+            <span>Check water</span>
+          </button>
         </div>
-        <p id="zip-error" class="field-error" role="alert" hidden></p>
+        <p id="q-error" class="field-error" role="alert" hidden></p>
+
+        <div class="chips" aria-label="Try an example">
+          <span class="chips-label">Try:</span>
+          <!-- Each chip carries the search it runs; app.js wires them up. -->
+          <button type="button" class="chip" data-mode="zip" data-q="48502">Flint, MI 48502</button>
+          <button type="button" class="chip" data-mode="zip" data-q="02119">Boston 02119</button>
+          <button type="button" class="chip" data-mode="zip" data-q="64130">Kansas City 64130</button>
+          <button type="button" class="chip" data-mode="zip" data-q="08638">Trenton 08638</button>
+          <button type="button" class="chip" data-mode="zip" data-q="10001">New York 10001</button>
+          <button type="button" class="chip" data-mode="address" data-q="1600 Pennsylvania Ave NW, Washington, DC 20500">An address: White House</button>
+        </div>
       </form>
-    </header>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30c120 24 240 24 360 8s240-30 360-22 240 34 360 32 240-24 360-12v24H0z"/></svg>
+  </header>
 
-    <section id="results" aria-live="polite" aria-busy="false"></section>
+  <main class="wrap main">
+    <section id="results" tabindex="-1" aria-live="polite" aria-busy="false"></section>
 
-    <footer class="footer">
-      <p>Data comes from the U.S. EPA Safe Drinking Water Information System (SDWIS). Federal data is updated quarterly, so very recent changes may not appear yet.</p>
-      <p>Matching a zip code to a water system is approximate. Zip codes and water service areas do not line up exactly.</p>
-      <p>This is not a substitute for your utility's annual water quality report (Consumer Confidence Report), which you can request from your water provider.</p>
-    </footer>
+    <section class="how" id="how">
+      <h2>How this works</h2>
+      <ol class="steps">
+        <li><strong>Find your water system.</strong> We match your address or zip code to the utility that most likely serves it.</li>
+        <li><strong>Read the EPA record.</strong> We look at violations from the federal drinking-water database.</li>
+        <li><strong>Explain it simply.</strong> A green, yellow or red result, a few plain sentences, and what you can do next.</li>
+      </ol>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p class="note"><strong>Not a substitute for your utility's annual water quality report</strong> (the Consumer Confidence Report). You can ask your water provider for a copy. This site never says water is "safe" or "unsafe"; it reports what public records show.</p>
+      <p class="note">How matching works: a street address is placed on a map and checked against EPA's service-area boundaries. A zip code is matched by its center point and by the places each utility lists as served, so zip matches are approximate.</p>
+      <h2 class="footer-h">Data sources</h2>
+      <ul class="sources">
+        <li>U.S. EPA Safe Drinking Water Information System (SDWIS), updated quarterly</li>
+        <li>U.S. EPA Water System Boundaries</li>
+        <li>U.S. Census Bureau Geocoder and American Community Survey (housing age)</li>
+        <li>GeoNames postal codes, licensed <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC BY 4.0</a></li>
+        <li>California State Water Resources Control Board (SAFER program)</li>
+      </ul>
+    </div>
+  </footer>
+
   <script src="/static/app.js"></script>
 </body>
 </html>

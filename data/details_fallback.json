@@ -1,0 +1,490 @@
+{
+ "MI0002310": {
+  "neighbors": [
+   {
+    "pwsid": "MI0002615",
+    "name": "GENESEE COUNTY WATER SYSTEM",
+    "population_served": 71500,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "MI0001010",
+    "name": "BURTON, CITY OF",
+    "population_served": 21000,
+    "has_current_health_based": true,
+    "has_current_any": true
+   },
+   {
+    "pwsid": "MI0002745",
+    "name": "CHARTER TOWNSHIP OF GRAND BLANC",
+    "population_served": 21000,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "MI0000540",
+    "name": "BEECHER METROPOLITAN DISTRICT",
+    "population_served": 9400,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "MI0002340",
+    "name": "FLUSHING, CITY OF",
+    "population_served": 8311,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "MI0002740",
+    "name": "GRAND BLANC, CITY OF",
+    "population_served": 8276,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "MI0040162",
+    "name": "WESTHAVEN MOBILE HOME PARK, LLC",
+    "population_served": 122,
+    "has_current_health_based": false,
+    "has_current_any": true
+   },
+   {
+    "pwsid": "MI0040140",
+    "name": "MY PLACE AT HERITAGE ESTATES",
+    "population_served": 75,
+    "has_current_health_based": false,
+    "has_current_any": true
+   }
+  ],
+  "state_report": null
+ },
+ "MA3035000": {
+  "neighbors": [
+   {
+    "pwsid": "MA3049000",
+    "name": "CAMBRIDGE WATER DEPARTMENT",
+    "population_served": 118214,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "MA3243000",
+    "name": "QUINCY WATER DEPT. (MWRA)",
+    "population_served": 106000,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "MA3274000",
+    "name": "SOMERVILLE WATER DEPT. (MWRA)",
+    "population_served": 81045,
+    "has_current_health_based": true,
+    "has_current_any": true
+   },
+   {
+    "pwsid": "MA3165000",
+    "name": "MALDEN WATER DIVISION (MWRA)",
+    "population_served": 66263,
+    "has_current_health_based": false,
+    "has_current_any": true
+   },
+   {
+    "pwsid": "MA3046000",
+    "name": "BROOKLINE WATER AND SEWER DIVISION",
+    "population_served": 63191,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "MA3248000",
+    "name": "REVERE WATER DIVISION (MWRA)",
+    "population_served": 62186,
+    "has_current_health_based": false,
+    "has_current_any": true
+   },
+   {
+    "pwsid": "MA3176000",
+    "name": "MEDFORD WATER DEPT. (MWRA)",
+    "population_served": 61700,
+    "has_current_health_based": true,
+    "has_current_any": true
+   },
+   {
+    "pwsid": "MA3093000",
+    "name": "EVERETT WATER DEPT. (MWRA)",
+    "population_served": 49075,
+    "has_current_health_based": false,
+    "has_current_any": true
+   }
+  ],
+  "state_report": null
+ },
+ "MO1010415": {
+  "neighbors": [
+   {
+    "pwsid": "KS2009110",
+    "name": "WATER DISTRICT 1 OF JOHNSON CO",
+    "population_served": 482000,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "KS2020906",
+    "name": "KANSAS CITY BOARD OF PUBLIC UTILITIES",
+    "population_served": 152960,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "MO1010625",
+    "name": "MO AMERICAN PLATTE COUNTY",
+    "population_served": 16645,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "MO1010580",
+    "name": "NORTH KANSAS CITY PWS",
+    "population_served": 4500,
+    "has_current_health_based": false,
+    "has_current_any": true
+   }
+  ],
+  "state_report": null
+ },
+ "NJ1111001": {
+  "neighbors": [
+   {
+    "pwsid": "PA1090026",
+    "name": "LOWER BUCKS CO JOINT MUN AUTH",
+    "population_served": 63007,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "NJ1103001",
+    "name": "AQUA NJ - HAMILTON SQUARE",
+    "population_served": 39128,
+    "has_current_health_based": false,
+    "has_current_any": true
+   },
+   {
+    "pwsid": "PA1090074",
+    "name": "PA AMERICAN WATER CO YARDLEY",
+    "population_served": 33171,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "PA1090022",
+    "name": "FALLS TWP  WATER & SEWER DEPT",
+    "population_served": 24400,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "NJ0303001",
+    "name": "BORDENTOWN WATER DEPARTM",
+    "population_served": 15821,
+    "has_current_health_based": false,
+    "has_current_any": true
+   },
+   {
+    "pwsid": "PA1090037",
+    "name": "MORRISVILLE MUNIC AUTHORITY",
+    "population_served": 13342,
+    "has_current_health_based": true,
+    "has_current_any": true
+   },
+   {
+    "pwsid": "NJ1107002",
+    "name": "AQUA NJ - LAWRENCE",
+    "population_served": 8655,
+    "has_current_health_based": false,
+    "has_current_any": true
+   },
+   {
+    "pwsid": "NJ1107001",
+    "name": "LAWRENCEVILLE SCHOOL",
+    "population_served": 1000,
+    "has_current_health_based": false,
+    "has_current_any": true
+   }
+  ],
+  "state_report": null
+ },
+ "LA1105008": {
+  "neighbors": [
+   {
+    "pwsid": "LA1105001",
+    "name": "TOWN OF AMITE WATER SYSTEM",
+    "population_served": 4300,
+    "has_current_health_based": true,
+    "has_current_any": true
+   },
+   {
+    "pwsid": "LA1105022",
+    "name": "ROSELAND WATER SYSTEM",
+    "population_served": 1521,
+    "has_current_health_based": false,
+    "has_current_any": true
+   },
+   {
+    "pwsid": "LA1105078",
+    "name": "FSWC- VELMA",
+    "population_served": 1302,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "LA1105028",
+    "name": "WESTVIEW WATER WORKS",
+    "population_served": 1134,
+    "has_current_health_based": true,
+    "has_current_any": true
+   },
+   {
+    "pwsid": "LA1105036",
+    "name": "FSWC-BANKSTON",
+    "population_served": 120,
+    "has_current_health_based": false,
+    "has_current_any": false
+   }
+  ],
+  "state_report": null
+ },
+ "CA1910067": {
+  "neighbors": [
+   {
+    "pwsid": "CA1910043",
+    "name": "GLENDALE-CITY, WATER DEPT.",
+    "population_served": 188784,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "CA1910036",
+    "name": "CALIFORNIA WATER SERVICE CO. - ELA",
+    "population_served": 152474,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "CA1910001",
+    "name": "CITY OF ALHAMBRA",
+    "population_served": 83750,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "CA1910077",
+    "name": "GSWC - FLORENCE/GRAHAM",
+    "population_served": 63500,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "CA1910092",
+    "name": "MONTEREY PARK-CITY, WATER DEPT.",
+    "population_served": 62183,
+    "has_current_health_based": false,
+    "has_current_any": true
+   },
+   {
+    "pwsid": "CA1910167",
+    "name": "VERNON-CITY, WATER DEPT.",
+    "population_served": 28112,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "CA1910154",
+    "name": "CITY OF SOUTH PASADENA",
+    "population_served": 25329,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "CA1910049",
+    "name": "HUNTINGTON PARK-CITY, WATER DEPT.",
+    "population_served": 15437,
+    "has_current_health_based": false,
+    "has_current_any": false
+   }
+  ],
+  "state_report": {
+   "state": "CA",
+   "agency": "California State Water Resources Control Board",
+   "program": "SAFER Drinking Water Risk Assessment",
+   "status": "Not Assessed",
+   "failing_since": null,
+   "state_violations": [],
+   "source_url": "https://data.ca.gov/dataset/safer-failing-and-at-risk-drinking-water-systems"
+  }
+ },
+ "NY7003493": {
+  "neighbors": [
+   {
+    "pwsid": "NJ0238001",
+    "name": "VEOLIA WATER NEW JERSEY HACKENSACK",
+    "population_served": 792713,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "NJ0906001",
+    "name": "JERSEY CITY MUA",
+    "population_served": 262000,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "NJ0901001",
+    "name": "CITY OF BAYONNE",
+    "population_served": 63000,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "NJ0905001",
+    "name": "HOBOKEN WATER UTILITY",
+    "population_served": 52000,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "NJ0907001",
+    "name": "KEARNY WATER DEPARTMENT",
+    "population_served": 41664,
+    "has_current_health_based": false,
+    "has_current_any": false
+   }
+  ],
+  "state_report": null
+ },
+ "IL0316000": {
+  "neighbors": [],
+  "state_report": null
+ },
+ "CA1010018": {
+  "neighbors": [],
+  "state_report": {
+   "state": "CA",
+   "agency": "California State Water Resources Control Board",
+   "program": "SAFER Drinking Water Risk Assessment",
+   "status": "Failing",
+   "failing_since": "2021-08-06",
+   "state_violations": [
+    {
+     "kind": "Primary MCL",
+     "analytes": "1,2,3-TRICHLOROPROPANE"
+    }
+   ],
+   "source_url": "https://data.ca.gov/dataset/safer-failing-and-at-risk-drinking-water-systems"
+  }
+ },
+ "CA1910077": {
+  "neighbors": [
+   {
+    "pwsid": "CA1910067",
+    "name": "LOS ANGELES-CITY, DEPT. OF WATER & POWER",
+    "population_served": 3856043,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "CA1910155",
+    "name": "GSWC - SOUTHWEST",
+    "population_served": 277740,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "CA1910036",
+    "name": "CALIFORNIA WATER SERVICE CO. - ELA",
+    "population_served": 152474,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "CA1910051",
+    "name": "INGLEWOOD- CITY, WATER DEPT.",
+    "population_served": 80824,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "CA1910152",
+    "name": "SOUTH GATE-CITY, WATER DEPT.",
+    "population_served": 76443,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "CA1910026",
+    "name": "COMPTON-CITY, WATER DEPT.",
+    "population_served": 74877,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "CA1910079",
+    "name": "LYNWOOD-CITY, WATER DEPT.",
+    "population_served": 66967,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "CA1910011",
+    "name": "GSWC - BELL, BELL GARDENS",
+    "population_served": 54877,
+    "has_current_health_based": false,
+    "has_current_any": false
+   }
+  ],
+  "state_report": {
+   "state": "CA",
+   "agency": "California State Water Resources Control Board",
+   "program": "SAFER Drinking Water Risk Assessment",
+   "status": "Potentially At-Risk",
+   "failing_since": null,
+   "state_violations": [],
+   "source_url": "https://data.ca.gov/dataset/safer-failing-and-at-risk-drinking-water-systems"
+  }
+ },
+ "DC0000002": {
+  "neighbors": [
+   {
+    "pwsid": "MD0150005",
+    "name": "WASHINGTON SUBURBAN SANITARY COMMISSION",
+    "population_served": 1900000,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "VA6013010",
+    "name": "ARLINGTON COUNTY",
+    "population_served": 215000,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "VA6510010",
+    "name": "ALEXANDRIA, CITY OF",
+    "population_served": 159200,
+    "has_current_health_based": false,
+    "has_current_any": false
+   },
+   {
+    "pwsid": "DC0000004",
+    "name": "JOINT BASE ANACOSTIA - BOLLING",
+    "population_served": 19312,
+    "has_current_health_based": true,
+    "has_current_any": true
+   }
+  ],
+  "state_report": null
+ }
+}

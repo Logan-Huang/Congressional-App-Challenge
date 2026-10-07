@@ -7,6 +7,7 @@ This file only knows how to ask the API questions. Deciding what the answers
 mean is data_store.py's job.
 """
 
+import time
 from urllib.parse import quote
 
 import requests
@@ -19,6 +20,25 @@ _session = requests.Session()
 
 class EpaApiError(Exception):
     """Raised for anything that stops us getting a clean answer from EPA."""
+
+
+RETRY_WAIT_SECONDS = 1.0  # how long to pause before retrying a rate-limited request
+
+
+def _get_with_retry(url, timeout):
+    """GET a URL; if EPA says "too many requests" (HTTP 429), wait briefly and try once more.
+
+    WHY: a lookup fires ~30 requests at once, and EPA sometimes throttles a burst.
+    One short retry usually succeeds and is far better than dropping to fallback data.
+    """
+    for attempt in (1, 2):
+        try:
+            response = _session.get(url, timeout=timeout)
+        except requests.RequestException as exc:  # timeouts, DNS, connection resets
+            raise EpaApiError(f"Request failed: {exc}") from exc
+        if response.status_code != 429 or attempt == 2:
+            return response
+        time.sleep(RETRY_WAIT_SECONDS)
 
 
 def query(table, filters, rows=None, timeout=8):
@@ -37,10 +57,7 @@ def query(table, filters, rows=None, timeout=8):
     parts.append("JSON")
     url = BASE_URL + "/" + "/".join(parts)
 
-    try:
-        response = _session.get(url, timeout=timeout)
-    except requests.RequestException as exc:  # timeouts, DNS, connection resets
-        raise EpaApiError(f"Request failed: {exc}") from exc
+    response = _get_with_retry(url, timeout)
 
     if response.status_code != 200:
         raise EpaApiError(f"EPA API returned HTTP {response.status_code}")

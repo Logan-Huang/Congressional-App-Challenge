@@ -1,0 +1,461 @@
+{
+ "as_of": "2026-10-07",
+ "source": "EPA Envirofacts SDWIS (active community water systems)",
+ "national": {
+  "systems": 48594,
+  "current_health_based": 2736,
+  "health_based_5yr": 6831,
+  "pct_current_health_based": 5.6,
+  "pct_health_based_5yr": 14.1
+ },
+ "states": {
+  "AL": {
+   "name": "Alabama",
+   "systems": 501,
+   "current_health_based": 9,
+   "health_based_5yr": 39,
+   "pct_current_health_based": 1.8,
+   "pct_health_based_5yr": 7.8
+  },
+  "AK": {
+   "name": "Alaska",
+   "systems": 407,
+   "current_health_based": 65,
+   "health_based_5yr": 155,
+   "pct_current_health_based": 16.0,
+   "pct_health_based_5yr": 38.1
+  },
+  "AZ": {
+   "name": "Arizona",
+   "systems": 746,
+   "current_health_based": 72,
+   "health_based_5yr": 214,
+   "pct_current_health_based": 9.7,
+   "pct_health_based_5yr": 28.7
+  },
+  "AR": {
+   "name": "Arkansas",
+   "systems": 658,
+   "current_health_based": 59,
+   "health_based_5yr": 129,
+   "pct_current_health_based": 9.0,
+   "pct_health_based_5yr": 19.6
+  },
+  "CA": {
+   "name": "California",
+   "systems": 2803,
+   "current_health_based": 194,
+   "health_based_5yr": 311,
+   "pct_current_health_based": 6.9,
+   "pct_health_based_5yr": 11.1
+  },
+  "CO": {
+   "name": "Colorado",
+   "systems": 1058,
+   "current_health_based": 73,
+   "health_based_5yr": 236,
+   "pct_current_health_based": 6.9,
+   "pct_health_based_5yr": 22.3
+  },
+  "CT": {
+   "name": "Connecticut",
+   "systems": 474,
+   "current_health_based": 13,
+   "health_based_5yr": 68,
+   "pct_current_health_based": 2.7,
+   "pct_health_based_5yr": 14.3
+  },
+  "DE": {
+   "name": "Delaware",
+   "systems": 204,
+   "current_health_based": 2,
+   "health_based_5yr": 13,
+   "pct_current_health_based": 1.0,
+   "pct_health_based_5yr": 6.4
+  },
+  "DC": {
+   "name": "District of Columbia",
+   "systems": 4,
+   "current_health_based": 1,
+   "health_based_5yr": 2,
+   "pct_current_health_based": 25.0,
+   "pct_health_based_5yr": 50.0
+  },
+  "FL": {
+   "name": "Florida",
+   "systems": 1593,
+   "current_health_based": 52,
+   "health_based_5yr": 106,
+   "pct_current_health_based": 3.3,
+   "pct_health_based_5yr": 6.7
+  },
+  "GA": {
+   "name": "Georgia",
+   "systems": 1743,
+   "current_health_based": 34,
+   "health_based_5yr": 98,
+   "pct_current_health_based": 2.0,
+   "pct_health_based_5yr": 5.6
+  },
+  "HI": {
+   "name": "Hawaii",
+   "systems": 118,
+   "current_health_based": 1,
+   "health_based_5yr": 1,
+   "pct_current_health_based": 0.8,
+   "pct_health_based_5yr": 0.8
+  },
+  "ID": {
+   "name": "Idaho",
+   "systems": 762,
+   "current_health_based": 53,
+   "health_based_5yr": 127,
+   "pct_current_health_based": 7.0,
+   "pct_health_based_5yr": 16.7
+  },
+  "IL": {
+   "name": "Illinois",
+   "systems": 1788,
+   "current_health_based": 50,
+   "health_based_5yr": 204,
+   "pct_current_health_based": 2.8,
+   "pct_health_based_5yr": 11.4
+  },
+  "IN": {
+   "name": "Indiana",
+   "systems": 767,
+   "current_health_based": 37,
+   "health_based_5yr": 122,
+   "pct_current_health_based": 4.8,
+   "pct_health_based_5yr": 15.9
+  },
+  "IA": {
+   "name": "Iowa",
+   "systems": 1082,
+   "current_health_based": 16,
+   "health_based_5yr": 47,
+   "pct_current_health_based": 1.5,
+   "pct_health_based_5yr": 4.3
+  },
+  "KS": {
+   "name": "Kansas",
+   "systems": 853,
+   "current_health_based": 45,
+   "health_based_5yr": 139,
+   "pct_current_health_based": 5.3,
+   "pct_health_based_5yr": 16.3
+  },
+  "KY": {
+   "name": "Kentucky",
+   "systems": 372,
+   "current_health_based": 8,
+   "health_based_5yr": 74,
+   "pct_current_health_based": 2.2,
+   "pct_health_based_5yr": 19.9
+  },
+  "LA": {
+   "name": "Louisiana",
+   "systems": 898,
+   "current_health_based": 241,
+   "health_based_5yr": 374,
+   "pct_current_health_based": 26.8,
+   "pct_health_based_5yr": 41.6
+  },
+  "ME": {
+   "name": "Maine",
+   "systems": 386,
+   "current_health_based": 12,
+   "health_based_5yr": 58,
+   "pct_current_health_based": 3.1,
+   "pct_health_based_5yr": 15.0
+  },
+  "MD": {
+   "name": "Maryland",
+   "systems": 460,
+   "current_health_based": 5,
+   "health_based_5yr": 22,
+   "pct_current_health_based": 1.1,
+   "pct_health_based_5yr": 4.8
+  },
+  "MA": {
+   "name": "Massachusetts",
+   "systems": 528,
+   "current_health_based": 35,
+   "health_based_5yr": 56,
+   "pct_current_health_based": 6.6,
+   "pct_health_based_5yr": 10.6
+  },
+  "MI": {
+   "name": "Michigan",
+   "systems": 1376,
+   "current_health_based": 26,
+   "health_based_5yr": 135,
+   "pct_current_health_based": 1.9,
+   "pct_health_based_5yr": 9.8
+  },
+  "MN": {
+   "name": "Minnesota",
+   "systems": 969,
+   "current_health_based": 41,
+   "health_based_5yr": 61,
+   "pct_current_health_based": 4.2,
+   "pct_health_based_5yr": 6.3
+  },
+  "MS": {
+   "name": "Mississippi",
+   "systems": 1011,
+   "current_health_based": 29,
+   "health_based_5yr": 66,
+   "pct_current_health_based": 2.9,
+   "pct_health_based_5yr": 6.5
+  },
+  "MO": {
+   "name": "Missouri",
+   "systems": 1434,
+   "current_health_based": 45,
+   "health_based_5yr": 203,
+   "pct_current_health_based": 3.1,
+   "pct_health_based_5yr": 14.2
+  },
+  "MT": {
+   "name": "Montana",
+   "systems": 804,
+   "current_health_based": 30,
+   "health_based_5yr": 80,
+   "pct_current_health_based": 3.7,
+   "pct_health_based_5yr": 10.0
+  },
+  "NE": {
+   "name": "Nebraska",
+   "systems": 583,
+   "current_health_based": 21,
+   "health_based_5yr": 67,
+   "pct_current_health_based": 3.6,
+   "pct_health_based_5yr": 11.5
+  },
+  "NV": {
+   "name": "Nevada",
+   "systems": 193,
+   "current_health_based": 12,
+   "health_based_5yr": 26,
+   "pct_current_health_based": 6.2,
+   "pct_health_based_5yr": 13.5
+  },
+  "NH": {
+   "name": "New Hampshire",
+   "systems": 706,
+   "current_health_based": 22,
+   "health_based_5yr": 112,
+   "pct_current_health_based": 3.1,
+   "pct_health_based_5yr": 15.9
+  },
+  "NJ": {
+   "name": "New Jersey",
+   "systems": 555,
+   "current_health_based": 46,
+   "health_based_5yr": 117,
+   "pct_current_health_based": 8.3,
+   "pct_health_based_5yr": 21.1
+  },
+  "NM": {
+   "name": "New Mexico",
+   "systems": 557,
+   "current_health_based": 119,
+   "health_based_5yr": 234,
+   "pct_current_health_based": 21.4,
+   "pct_health_based_5yr": 42.0
+  },
+  "NY": {
+   "name": "New York",
+   "systems": 2246,
+   "current_health_based": 121,
+   "health_based_5yr": 289,
+   "pct_current_health_based": 5.4,
+   "pct_health_based_5yr": 12.9
+  },
+  "NC": {
+   "name": "North Carolina",
+   "systems": 1978,
+   "current_health_based": 37,
+   "health_based_5yr": 128,
+   "pct_current_health_based": 1.9,
+   "pct_health_based_5yr": 6.5
+  },
+  "ND": {
+   "name": "North Dakota",
+   "systems": 305,
+   "current_health_based": 3,
+   "health_based_5yr": 13,
+   "pct_current_health_based": 1.0,
+   "pct_health_based_5yr": 4.3
+  },
+  "OH": {
+   "name": "Ohio",
+   "systems": 1122,
+   "current_health_based": 28,
+   "health_based_5yr": 100,
+   "pct_current_health_based": 2.5,
+   "pct_health_based_5yr": 8.9
+  },
+  "OK": {
+   "name": "Oklahoma",
+   "systems": 890,
+   "current_health_based": 218,
+   "health_based_5yr": 332,
+   "pct_current_health_based": 24.5,
+   "pct_health_based_5yr": 37.3
+  },
+  "OR": {
+   "name": "Oregon",
+   "systems": 939,
+   "current_health_based": 40,
+   "health_based_5yr": 172,
+   "pct_current_health_based": 4.3,
+   "pct_health_based_5yr": 18.3
+  },
+  "PA": {
+   "name": "Pennsylvania",
+   "systems": 1849,
+   "current_health_based": 94,
+   "health_based_5yr": 447,
+   "pct_current_health_based": 5.1,
+   "pct_health_based_5yr": 24.2
+  },
+  "RI": {
+   "name": "Rhode Island",
+   "systems": 88,
+   "current_health_based": 7,
+   "health_based_5yr": 18,
+   "pct_current_health_based": 8.0,
+   "pct_health_based_5yr": 20.5
+  },
+  "SC": {
+   "name": "South Carolina",
+   "systems": 559,
+   "current_health_based": 13,
+   "health_based_5yr": 40,
+   "pct_current_health_based": 2.3,
+   "pct_health_based_5yr": 7.2
+  },
+  "SD": {
+   "name": "South Dakota",
+   "systems": 463,
+   "current_health_based": 12,
+   "health_based_5yr": 54,
+   "pct_current_health_based": 2.6,
+   "pct_health_based_5yr": 11.7
+  },
+  "TN": {
+   "name": "Tennessee",
+   "systems": 445,
+   "current_health_based": 11,
+   "health_based_5yr": 47,
+   "pct_current_health_based": 2.5,
+   "pct_health_based_5yr": 10.6
+  },
+  "TX": {
+   "name": "Texas",
+   "systems": 4757,
+   "current_health_based": 323,
+   "health_based_5yr": 710,
+   "pct_current_health_based": 6.8,
+   "pct_health_based_5yr": 14.9
+  },
+  "UT": {
+   "name": "Utah",
+   "systems": 502,
+   "current_health_based": 12,
+   "health_based_5yr": 75,
+   "pct_current_health_based": 2.4,
+   "pct_health_based_5yr": 14.9
+  },
+  "VT": {
+   "name": "Vermont",
+   "systems": 404,
+   "current_health_based": 4,
+   "health_based_5yr": 24,
+   "pct_current_health_based": 1.0,
+   "pct_health_based_5yr": 5.9
+  },
+  "VA": {
+   "name": "Virginia",
+   "systems": 1056,
+   "current_health_based": 17,
+   "health_based_5yr": 90,
+   "pct_current_health_based": 1.6,
+   "pct_health_based_5yr": 8.5
+  },
+  "WA": {
+   "name": "Washington",
+   "systems": 2309,
+   "current_health_based": 66,
+   "health_based_5yr": 144,
+   "pct_current_health_based": 2.9,
+   "pct_health_based_5yr": 6.2
+  },
+  "WV": {
+   "name": "West Virginia",
+   "systems": 413,
+   "current_health_based": 122,
+   "health_based_5yr": 171,
+   "pct_current_health_based": 29.5,
+   "pct_health_based_5yr": 41.4
+  },
+  "WI": {
+   "name": "Wisconsin",
+   "systems": 1022,
+   "current_health_based": 32,
+   "health_based_5yr": 138,
+   "pct_current_health_based": 3.1,
+   "pct_health_based_5yr": 13.5
+  },
+  "WY": {
+   "name": "Wyoming",
+   "systems": 323,
+   "current_health_based": 24,
+   "health_based_5yr": 67,
+   "pct_current_health_based": 7.4,
+   "pct_health_based_5yr": 20.7
+  },
+  "AS": {
+   "name": "American Samoa",
+   "systems": 10,
+   "current_health_based": 2,
+   "health_based_5yr": 4,
+   "pct_current_health_based": 20.0,
+   "pct_health_based_5yr": 40.0
+  },
+  "GU": {
+   "name": "Guam",
+   "systems": 5,
+   "current_health_based": 0,
+   "health_based_5yr": 2,
+   "pct_current_health_based": 0.0,
+   "pct_health_based_5yr": 40.0
+  },
+  "MP": {
+   "name": "Northern Mariana Islands",
+   "systems": 35,
+   "current_health_based": 0,
+   "health_based_5yr": 12,
+   "pct_current_health_based": 0.0,
+   "pct_health_based_5yr": 34.3
+  },
+  "PR": {
+   "name": "Puerto Rico",
+   "systems": 404,
+   "current_health_based": 82,
+   "health_based_5yr": 51,
+   "pct_current_health_based": 20.3,
+   "pct_health_based_5yr": 12.6
+  },
+  "VI": {
+   "name": "U.S. Virgin Islands",
+   "systems": 77,
+   "current_health_based": 0,
+   "health_based_5yr": 7,
+   "pct_current_health_based": 0.0,
+   "pct_health_based_5yr": 9.1
+  }
+ }
+}

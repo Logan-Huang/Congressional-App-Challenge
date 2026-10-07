@@ -4,7 +4,7 @@ import re
 
 import pytest
 
-from app.translate import translate_system
+from app.translate import translate_details, translate_system
 
 BANNED = ["toxic", "poison", "dangerous", "met all", "meets all", "is safe", "are safe", "perfectly safe"]
 
@@ -174,7 +174,7 @@ def test_yellow_multiple():
                     contaminant_code=c) for i, c in enumerate(["1040", "1005", "2950", "1022"])]
     t = translate_system(system(vs))
     assert t["status"] == "yellow"
-    assert "4 open issues" in t["sentences"][0] and "(and 2 more)" in t["sentences"][0]
+    assert "4 open issues, including" in t["sentences"][0]
     assert "These are paperwork" in t["sentences"][1]
 
 
@@ -220,7 +220,7 @@ def test_unknown_contaminant_never_leaks_code(category, health):
 
 
 def test_unknown_with_known_rule_code_falls_back_to_rule():
-    v = violation(contaminant_code="9999", rule_code="350", category_code="MR",
+    v = violation(contaminant_code="9876", rule_code="350", category_code="MR",
                   is_health_based=False, measure=None, unit=None)
     assert "lead and copper" in translate_system(system([v]))["sentences"][0]
 
@@ -283,7 +283,7 @@ def test_history_sentence_is_grammatical_for_unknown_code():
 
 
 def test_lead_inventory_is_described_as_record_keeping():
-    v = violation(contaminant_code="5200", rule_code="350", category_code="TT")
+    v = violation(contaminant_code="5200", rule_code="351", violation_code="2E", category_code="TT")
     s = translate_system(system([v]))["sentences"]
     assert "inventory of lead pipes" in s[0] and "treatment step" not in s[0]
     assert any("record-keeping" in x for x in s)
@@ -296,3 +296,231 @@ def test_yellow_with_lead_exceedance_has_no_reassurance():
     s = translate_system(sysd)["sentences"]
     assert not any("does not by itself" in x for x in s)
     assert any("above the federal action level" in x for x in s)
+
+
+# ---- v2: known status, official codes, trend, details
+
+def by_year(health_old=0, health_new=0, other_old=0, other_new=0, last=2026):
+    """10 rows ascending; put the counts in the first/last year of each 5-year block."""
+    rows = [{"year": y, "health_based": 0, "other": 0} for y in range(last - 9, last + 1)]
+    rows[0]["health_based"], rows[0]["other"] = health_old, other_old
+    rows[-1]["health_based"], rows[-1]["other"] = health_new, other_new
+    return {"by_year": rows, "lead_90th": []}
+
+
+def test_known_recent_is_current_and_not_called_fixed():
+    from datetime import date
+    recent = f"{date.today().year - 1}-03-01"
+    t = translate_system(system([violation(status="known", begin_date=recent)]))
+    text = check_common(t)
+    assert t["status"] == "red"
+    assert "has not been marked resolved" in text
+    assert "fixed" not in text
+
+
+def test_known_old_is_not_current():
+    t = translate_system(system([violation(status="known", begin_date="2005-01-01")]))
+    assert t["status"] == "green"
+    assert "no longer counted as current" in t["sentences"][1]
+
+
+def test_unknown_but_official_code_gets_readable_name():
+    v = violation(contaminant_code="2072", rule_code="987", category_code="MCL")  # Endosulfan II
+    s0 = translate_system(system([v]))["sentences"][0]
+    assert "endosulfan" in s0.lower() and "2072" not in s0 and "regulated contaminant" not in s0
+
+
+def test_official_rule_name_for_unknown_contaminant():
+    v = violation(contaminant_code="9876", rule_code="430", category_code="MR", is_health_based=False)
+    s0 = translate_system(system([v]))["sentences"][0]
+    assert "Miscellaneous Other Rules" in s0 and "430" not in s0
+
+
+def test_codes_match_official_list():
+    import csv
+    from app.codes import CONTAMINANTS, VIOLATION_OVERRIDES
+    ref = {r["VALUE_CODE"]: r["VALUE_DESCRIPTION"].lower()
+           for r in csv.DictReader(open("data/sdwa_ref_codes.csv", encoding="utf-8-sig"))
+           if r["VALUE_TYPE"] == "CONTAMINANT_CODE"}
+    for code in CONTAMINANTS:
+        assert code in ref, code          # every curated code exists officially
+    assert "groundwater" in ref["0700"] and "stage 2" in ref["0600"] and "filter backwash" in ref["0500"]
+    assert "lead and copper rule revisions" in ref["5200"] and ("5200", "2E") in VIOLATION_OVERRIDES
+
+
+def test_dbp_rule_0400_is_not_called_germ_removal():
+    v = violation(contaminant_code="0400", rule_code="210", category_code="TT")
+    s = " ".join(translate_system(system([v]))["sentences"])
+    assert "disinfection byproduct" in s and "river or lake" not in s
+
+
+def test_trend_no_history():
+    for hist in (None, {}, {"by_year": []}):
+        t = translate_system(system(history=hist))["trend"]
+        assert t["direction"] == "no_history" and t["sentence"]
+    assert translate_system(system())["trend"]["direction"] == "no_history"
+
+
+def test_trend_improving_and_worsening():
+    up = translate_system(system(history=by_year(health_old=4, health_new=1)))["trend"]
+    assert up["direction"] == "improving" and "down from 4" in up["sentence"]
+    down = translate_system(system(history=by_year(health_old=0, health_new=1)))["trend"]
+    assert down["direction"] == "worsening"
+
+
+def test_trend_small_change_is_steady():
+    t = translate_system(system(history=by_year(health_old=3, health_new=2)))["trend"]
+    assert t["direction"] == "steady"
+
+
+def test_trend_paperwork_only_is_soft():
+    t = translate_system(system(history=by_year(other_old=0, other_new=6)))["trend"]
+    assert t["direction"] == "steady" and "paperwork" in t["sentence"]
+
+
+def test_trend_all_zero_is_steady():
+    t = translate_system(system(history=by_year()))["trend"]
+    assert t["direction"] == "steady" and "No violations" in t["sentence"]
+
+
+def test_trend_bad_history_does_not_crash():
+    t = translate_system(system(history={"by_year": [{"year": "x"}, None, 5]}))["trend"]
+    assert t["direction"] == "no_history"
+
+
+def test_translation_has_guidance_key():
+    assert isinstance(translate_system(system())["guidance"], list)
+
+
+# ---- translate_details
+
+def details(**kw):
+    base = {
+        "comparison": {
+            "state": {"code": "MI", "name": "Michigan", "pct_current_health_based": 2.4},
+            "national": {"pct_current_health_based": 3.1},
+            "neighbors": [{"has_current_health_based": i == 0} for i in range(8)],
+        },
+        "state_report": None,
+        "lead_pipes": {"housing": {"geo": "tract", "median_year_built": 1948}, "state_lsl_estimate": None},
+    }
+    base.update(kw)
+    return base
+
+
+def all_text(d):
+    return " ".join(d["comparison_sentences"] + d["state_sentences"] + d["lead_pipe"]["sentences"])
+
+
+def test_details_comparison_sentences():
+    d = translate_details(details(), system())
+    assert d["comparison_sentences"][0].startswith("About 2 in 100 water systems in Michigan")
+    assert "about 3 in 100 across the U.S." in d["comparison_sentences"][0]
+    assert d["comparison_sentences"][0].endswith("this system does not.")
+    assert d["comparison_sentences"][1] == "Of 8 nearby systems, 1 has a current health-based violation."
+
+
+def test_details_comparison_system_has_violation_and_no_neighbors_hit():
+    d = translate_details(details(), system([violation()]))
+    assert d["comparison_sentences"][0].endswith("this system does.")
+    det = details()
+    det["comparison"]["neighbors"] = [{"has_current_health_based": False}] * 3
+    assert "none has" in translate_details(det, system())["comparison_sentences"][1]
+
+
+def test_details_tiny_percent_wording():
+    det = details()
+    det["comparison"]["state"]["pct_current_health_based"] = 0.2
+    assert "ewer than 1 in 100" in translate_details(det, system())["comparison_sentences"][0]
+
+
+def test_details_lead_pipe_levels():
+    assert translate_details(details(), system())["lead_pipe"]["level"] == "elevated"      # built 1948
+    newer = details(lead_pipes={"housing": {"geo": "zip", "median_year_built": 1995}})
+    assert translate_details(newer, system())["lead_pipe"]["level"] == "typical"
+    high = system(lead_90th={"value_mg_l": 0.02, "sample_date": None})
+    assert translate_details(newer, high)["lead_pipe"]["level"] == "elevated"
+    inv = violation(contaminant_code="5200", violation_code="2E", category_code="TT")
+    assert translate_details(newer, system([inv]))["lead_pipe"]["level"] == "elevated"
+    nodata = details(lead_pipes={"housing": None, "state_lsl_estimate": None})
+    assert translate_details(nodata, system())["lead_pipe"]["level"] == "unknown"
+
+
+def test_details_lead_pipe_always_says_estimate_and_1986():
+    for det in (details(), details(lead_pipes={"housing": None})):
+        lp = translate_details(det, system())["lead_pipe"]
+        text = " ".join(lp["sentences"])
+        assert 1 <= len(lp["sentences"]) <= 3
+        assert "estimate" in text and "not a test" in text and "1986" in text
+
+
+def test_details_california_sentences():
+    rep = {"state": "CA", "agency": "California State Water Resources Control Board", "status": "Failing",
+           "failing_since": "2019-01-01"}
+    s = translate_details(details(state_report=rep), system())["state_sentences"]
+    assert len(s) == 2 and "Failing" in s[0] and "January 2019" in s[0] and "stricter" in s[1]
+    na = dict(rep, status="Not Assessed")
+    s = translate_details(details(state_report=na), system())["state_sentences"]
+    assert "not included" in s[0]
+    for status in ("At-Risk", "Potentially At-Risk", "Not At-Risk"):
+        assert translate_details(details(state_report=dict(rep, status=status)), system())["state_sentences"]
+
+
+def test_details_missing_parts_never_crash():
+    for det in (None, {}, {"comparison": None, "state_report": None, "lead_pipes": None},
+                {"comparison": {"state": None, "national": None, "neighbors": None}},
+                {"lead_pipes": {"housing": {"median_year_built": "abc"}}}):
+        d = translate_details(det, system())
+        assert isinstance(d["comparison_sentences"], list)
+        assert d["lead_pipe"]["level"] in ("elevated", "typical", "unknown")
+    assert translate_details(None, None)["lead_pipe"]["sentences"]
+
+
+def test_details_no_banned_words_or_codes():
+    rep = {"state": "CA", "agency": "State Board", "status": "At-Risk"}
+    d = translate_details(details(state_report=rep), system([violation()]))
+    text = all_text(d).lower()
+    for word in BANNED:
+        assert word not in text
+    assert "none" not in text and "null" not in text
+
+
+# ---- review fixes
+
+def test_comparison_skips_this_system_clause_when_violations_unknown():
+    s = translate_details(details(), {"violations": None})["comparison_sentences"][0]
+    assert "this system" not in s
+
+
+def test_comparison_ignores_neighbors_with_unknown_status():
+    det = details()
+    det["comparison"]["neighbors"] = [{"has_current_health_based": None}, {"has_current_health_based": False}]
+    assert translate_details(det, system())["comparison_sentences"][1].startswith("Of 1 nearby system")
+
+
+def test_comparison_small_state_uses_counts_and_the_district():
+    det = details()
+    det["comparison"]["state"] = {"code": "DC", "name": "District of Columbia", "systems": 4,
+                                  "pct_current_health_based": 25.0}
+    first = translate_details(det, system())["comparison_sentences"][0]
+    assert first.startswith("1 of 4 water systems in the District of Columbia has")
+
+
+def test_lead_pipe_mid_years_are_not_called_less_likely():
+    mid = details(lead_pipes={"housing": {"geo": "zip", "median_year_built": 1967}})
+    lp = translate_details(mid, system())["lead_pipe"]
+    assert lp["level"] == "unknown" and "less likely" not in " ".join(lp["sentences"])
+    assert "possible" in " ".join(lp["sentences"])
+
+
+def test_trend_not_improving_while_health_violation_still_open():
+    years = [{"year": 2016 + i, "health_based": 4 if i < 5 else 0, "other": 0} for i in range(10)]
+    t = translate_system(system([violation()], history={"by_year": years}))["trend"]
+    assert t["direction"] == "steady" and "still open" in t["sentence"]
+    assert translate_system(system(history={"by_year": years}))["trend"]["direction"] == "improving"
+
+
+def test_worsening_trend_wording_is_calm():
+    years = [{"year": 2016 + i, "health_based": 0 if i < 5 else 3, "other": 0} for i in range(10)]
+    t = translate_system(system(history={"by_year": years}))["trend"]
+    assert t["direction"] == "worsening" and "up from" not in t["sentence"]
