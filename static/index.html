@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Water Quality Tracker</title>
+  <meta name="description" content="Enter a zip code to see whether your public water system meets federal EPA drinking-water standards.">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">Water Quality Tracker</p>
+      <h1>Is my tap water meeting federal standards?</h1>
+      <p class="lead">Enter your zip code. We check U.S. EPA records and explain what we find in plain English.</p>
+
+      <form id="lookup-form" novalidate>
+        <label for="zip">Enter your zip code</label>
+        <div class="row">
+          <input id="zip" name="zip" type="text" inputmode="numeric" pattern="[0-9]*"
+                 maxlength="5" autocomplete="postal-code" placeholder="e.g. 48502"
+                 aria-describedby="zip-error">
+          <button id="submit" type="submit">Check water</button>
+        </div>
+        <p id="zip-error" class="field-error" role="alert" hidden></p>
+      </form>
+    </header>
+
+    <section id="results" aria-live="polite" aria-busy="false"></section>
+
+    <footer class="footer">
+      <p>Data comes from the U.S. EPA Safe Drinking Water Information System (SDWIS). Federal data is updated quarterly, so very recent changes may not appear yet.</p>
+      <p>Matching a zip code to a water system is approximate. Zip codes and water service areas do not line up exactly.</p>
+      <p>This is not a substitute for your utility's annual water quality report (Consumer Confidence Report), which you can request from your water provider.</p>
+    </footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

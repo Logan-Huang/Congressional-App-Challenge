@@ -1,0 +1,797 @@
+{
+ "48502": {
+  "zip": "48502",
+  "source": "fallback",
+  "systems": [
+   {
+    "pwsid": "MI0002310",
+    "name": "FLINT, CITY OF",
+    "city": "FLINT",
+    "state": "MI",
+    "population_served": 81252,
+    "match_type": "city_served",
+    "total_violation_count": 5,
+    "violations": [
+     {
+      "violation_id": "227",
+      "contaminant_code": "5200",
+      "violation_code": "2E",
+      "category_code": "TT",
+      "rule_code": "351",
+      "is_health_based": true,
+      "status": "resolved",
+      "begin_date": "2024-10-17",
+      "end_date": null,
+      "returned_to_compliance_date": "2025-03-31",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 2
+     },
+     {
+      "violation_id": "220",
+      "contaminant_code": "5000",
+      "violation_code": "52",
+      "category_code": "MR",
+      "rule_code": "350",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2020-07-01",
+      "end_date": null,
+      "returned_to_compliance_date": "2020-12-31",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "219",
+      "contaminant_code": "5000",
+      "violation_code": "52",
+      "category_code": "MR",
+      "rule_code": "350",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2020-01-01",
+      "end_date": null,
+      "returned_to_compliance_date": "2020-12-31",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "217",
+      "contaminant_code": "5000",
+      "violation_code": "52",
+      "category_code": "MR",
+      "rule_code": "350",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2019-07-11",
+      "end_date": null,
+      "returned_to_compliance_date": "2019-09-16",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "205",
+      "contaminant_code": "7000",
+      "violation_code": "71",
+      "category_code": "Other",
+      "rule_code": "420",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2005-07-01",
+      "end_date": null,
+      "returned_to_compliance_date": "2005-12-31",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     }
+    ],
+    "lead_90th": {
+     "value_mg_l": 0.003,
+     "sample_date": "2026-06-30"
+    }
+   }
+  ]
+ },
+ "02119": {
+  "zip": "02119",
+  "source": "fallback",
+  "systems": [
+   {
+    "pwsid": "MA3035000",
+    "name": "BOSTON WATER AND SEWER COMMISSION (MWRA)",
+    "city": "BOSTON",
+    "state": "MA",
+    "population_served": 675647,
+    "match_type": "service_area",
+    "total_violation_count": 1,
+    "violations": [
+     {
+      "violation_id": "4",
+      "contaminant_code": "5000",
+      "violation_code": "64",
+      "category_code": "TT",
+      "rule_code": "350",
+      "is_health_based": true,
+      "status": "open",
+      "begin_date": "2020-11-01",
+      "end_date": null,
+      "returned_to_compliance_date": null,
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 2
+     }
+    ],
+    "lead_90th": {
+     "value_mg_l": 0.0058,
+     "sample_date": "2026-06-30"
+    }
+   }
+  ]
+ },
+ "64130": {
+  "zip": "64130",
+  "source": "fallback",
+  "systems": [
+   {
+    "pwsid": "MO1010415",
+    "name": "KANSAS CITY PWS",
+    "city": "KANSAS CITY",
+    "state": "MO",
+    "population_served": 553295,
+    "match_type": "city_served",
+    "total_violation_count": 4,
+    "violations": [
+     {
+      "violation_id": "55222",
+      "contaminant_code": "5000",
+      "violation_code": "66",
+      "category_code": "MR",
+      "rule_code": "350",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2025-12-30",
+      "end_date": null,
+      "returned_to_compliance_date": "2026-05-27",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "55221",
+      "contaminant_code": "5000",
+      "violation_code": "52",
+      "category_code": "MR",
+      "rule_code": "350",
+      "is_health_based": false,
+      "status": "open",
+      "begin_date": "2025-10-01",
+      "end_date": null,
+      "returned_to_compliance_date": null,
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "55223",
+      "contaminant_code": "5000",
+      "violation_code": "53",
+      "category_code": "MR",
+      "rule_code": "350",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2025-07-01",
+      "end_date": "2025-12-31",
+      "returned_to_compliance_date": "2026-01-22",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "55219",
+      "contaminant_code": "0800",
+      "violation_code": "42",
+      "category_code": "TT",
+      "rule_code": "123",
+      "is_health_based": true,
+      "status": "resolved",
+      "begin_date": "2019-03-01",
+      "end_date": null,
+      "returned_to_compliance_date": "2019-08-19",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 2
+     }
+    ],
+    "lead_90th": {
+     "value_mg_l": 0.00208,
+     "sample_date": "2025-12-31"
+    }
+   },
+   {
+    "pwsid": "MO1048081",
+    "name": "SPRINGDALE LAKE ESTATES",
+    "city": "BELTON",
+    "state": "MO",
+    "population_served": 1500,
+    "match_type": "city_served",
+    "total_violation_count": 6,
+    "violations": [
+     {
+      "violation_id": "24291",
+      "contaminant_code": "5000",
+      "violation_code": "66",
+      "category_code": "MR",
+      "rule_code": "350",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2023-12-30",
+      "end_date": null,
+      "returned_to_compliance_date": "2024-04-15",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "24290",
+      "contaminant_code": "7000",
+      "violation_code": "71",
+      "category_code": "Other",
+      "rule_code": "420",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2016-07-01",
+      "end_date": null,
+      "returned_to_compliance_date": "2017-07-19",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "24289",
+      "contaminant_code": "7000",
+      "violation_code": "71",
+      "category_code": "Other",
+      "rule_code": "420",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2014-07-01",
+      "end_date": null,
+      "returned_to_compliance_date": "2017-07-19",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "24286",
+      "contaminant_code": "7000",
+      "violation_code": "71",
+      "category_code": "Other",
+      "rule_code": "420",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2013-07-01",
+      "end_date": null,
+      "returned_to_compliance_date": "2022-03-21",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "24287",
+      "contaminant_code": "5000",
+      "violation_code": "66",
+      "category_code": "MR",
+      "rule_code": "350",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2013-01-01",
+      "end_date": null,
+      "returned_to_compliance_date": "2018-06-13",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     }
+    ],
+    "lead_90th": {
+     "value_mg_l": 0.0,
+     "sample_date": "2023-12-31"
+    }
+   }
+  ]
+ },
+ "08638": {
+  "zip": "08638",
+  "source": "fallback",
+  "systems": [
+   {
+    "pwsid": "NJ1111001",
+    "name": "TRENTON WATER WORKS",
+    "city": "TRENTON",
+    "state": "NJ",
+    "population_served": 217000,
+    "match_type": "city_served",
+    "total_violation_count": 131,
+    "violations": [
+     {
+      "violation_id": "4216",
+      "contaminant_code": "2950",
+      "violation_code": "02",
+      "category_code": "MCL",
+      "rule_code": "220",
+      "is_health_based": true,
+      "status": "archived",
+      "begin_date": "2024-10-01",
+      "end_date": "2024-12-31",
+      "returned_to_compliance_date": null,
+      "measure": 0.081,
+      "unit": "MG/L",
+      "state_mcl": 0.08,
+      "notification_tier": 2
+     },
+     {
+      "violation_id": "4217",
+      "contaminant_code": "5000",
+      "violation_code": "53",
+      "category_code": "MR",
+      "rule_code": "350",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2024-07-01",
+      "end_date": "2024-12-31",
+      "returned_to_compliance_date": "2025-06-30",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "4138",
+      "contaminant_code": "2456",
+      "violation_code": "35",
+      "category_code": "MR",
+      "rule_code": "220",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2023-12-28",
+      "end_date": null,
+      "returned_to_compliance_date": "2024-12-20",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "4194",
+      "contaminant_code": "0200",
+      "violation_code": "36",
+      "category_code": "MR",
+      "rule_code": "121",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2023-11-01",
+      "end_date": "2023-11-30",
+      "returned_to_compliance_date": "2023-12-31",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "4182",
+      "contaminant_code": "8000",
+      "violation_code": "3A",
+      "category_code": "MON",
+      "rule_code": "111",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2023-11-01",
+      "end_date": "2023-11-30",
+      "returned_to_compliance_date": "2023-12-31",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "4108",
+      "contaminant_code": "5000",
+      "violation_code": "64",
+      "category_code": "TT",
+      "rule_code": "350",
+      "is_health_based": true,
+      "status": "open",
+      "begin_date": "2020-05-21",
+      "end_date": null,
+      "returned_to_compliance_date": null,
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 2
+     },
+     {
+      "violation_id": "4084",
+      "contaminant_code": "7500",
+      "violation_code": "75",
+      "category_code": "Other",
+      "rule_code": "410",
+      "is_health_based": false,
+      "status": "open",
+      "begin_date": "2018-03-03",
+      "end_date": null,
+      "returned_to_compliance_date": null,
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "702",
+      "contaminant_code": "0400",
+      "violation_code": "27",
+      "category_code": "MR",
+      "rule_code": "500",
+      "is_health_based": false,
+      "status": "open",
+      "begin_date": "2002-07-01",
+      "end_date": null,
+      "returned_to_compliance_date": null,
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     }
+    ],
+    "lead_90th": {
+     "value_mg_l": 0.006,
+     "sample_date": "2026-06-30"
+    }
+   }
+  ]
+ },
+ "90001": {
+  "zip": "90001",
+  "source": "fallback",
+  "systems": [
+   {
+    "pwsid": "CA1910067",
+    "name": "LOS ANGELES-CITY, DEPT. OF WATER & POWER",
+    "city": "LOS ANGELES",
+    "state": "CA",
+    "population_served": 3875566,
+    "match_type": "city_served",
+    "total_violation_count": 4,
+    "violations": [
+     {
+      "violation_id": "9315006",
+      "contaminant_code": "0800",
+      "violation_code": "41",
+      "category_code": "TT",
+      "rule_code": "123",
+      "is_health_based": true,
+      "status": "resolved",
+      "begin_date": "2018-01-01",
+      "end_date": "2018-01-31",
+      "returned_to_compliance_date": "2018-01-22",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 2
+     },
+     {
+      "violation_id": "9315004",
+      "contaminant_code": "0300",
+      "violation_code": "38",
+      "category_code": "MR",
+      "rule_code": "122",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2016-03-01",
+      "end_date": "2016-03-31",
+      "returned_to_compliance_date": "2016-06-28",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "9315002",
+      "contaminant_code": "0700",
+      "violation_code": "05",
+      "category_code": "Other",
+      "rule_code": "140",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2016-01-20",
+      "end_date": null,
+      "returned_to_compliance_date": "2016-01-16",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "9315003",
+      "contaminant_code": "0700",
+      "violation_code": "41",
+      "category_code": "TT",
+      "rule_code": "140",
+      "is_health_based": true,
+      "status": "resolved",
+      "begin_date": "2016-01-01",
+      "end_date": "2016-01-31",
+      "returned_to_compliance_date": "2016-01-16",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 2
+     }
+    ],
+    "lead_90th": {
+     "value_mg_l": 0.0039,
+     "sample_date": "2023-12-31"
+    }
+   }
+  ]
+ },
+ "70451": {
+  "zip": "70451",
+  "source": "fallback",
+  "systems": [
+   {
+    "pwsid": "LA1105008",
+    "name": "TANGIPAHOA PARISH WATER DISTRICT",
+    "city": "NATALBANY",
+    "state": "LA",
+    "population_served": 75873,
+    "match_type": "admin_address",
+    "total_violation_count": 5,
+    "violations": [
+     {
+      "violation_id": "9007774",
+      "contaminant_code": "0700",
+      "violation_code": "45",
+      "category_code": "TT",
+      "rule_code": "140",
+      "is_health_based": true,
+      "status": "open",
+      "begin_date": "2026-05-24",
+      "end_date": null,
+      "returned_to_compliance_date": null,
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 2
+     },
+     {
+      "violation_id": "9007773",
+      "contaminant_code": "0700",
+      "violation_code": "45",
+      "category_code": "TT",
+      "rule_code": "140",
+      "is_health_based": true,
+      "status": "open",
+      "begin_date": "2026-05-24",
+      "end_date": null,
+      "returned_to_compliance_date": null,
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 2
+     },
+     {
+      "violation_id": "9007772",
+      "contaminant_code": "0700",
+      "violation_code": "45",
+      "category_code": "TT",
+      "rule_code": "140",
+      "is_health_based": true,
+      "status": "open",
+      "begin_date": "2026-05-24",
+      "end_date": null,
+      "returned_to_compliance_date": null,
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 2
+     },
+     {
+      "violation_id": "9007771",
+      "contaminant_code": "0700",
+      "violation_code": "45",
+      "category_code": "TT",
+      "rule_code": "140",
+      "is_health_based": true,
+      "status": "open",
+      "begin_date": "2026-05-24",
+      "end_date": null,
+      "returned_to_compliance_date": null,
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 2
+     },
+     {
+      "violation_id": "9007756",
+      "contaminant_code": "5200",
+      "violation_code": "2E",
+      "category_code": "TT",
+      "rule_code": "351",
+      "is_health_based": true,
+      "status": "resolved",
+      "begin_date": "2024-10-17",
+      "end_date": null,
+      "returned_to_compliance_date": "2025-02-06",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 2
+     }
+    ],
+    "lead_90th": {
+     "value_mg_l": 0.0016,
+     "sample_date": "2025-12-31"
+    }
+   },
+   {
+    "pwsid": "LA1105077",
+    "name": "TANGIPAHOA (SECOND WARD) WATER DISTRICT",
+    "city": "NATALBANY",
+    "state": "LA",
+    "population_served": 4112,
+    "match_type": "admin_address",
+    "total_violation_count": 2,
+    "violations": [
+     {
+      "violation_id": "2098234",
+      "contaminant_code": "5000",
+      "violation_code": "53",
+      "category_code": "MR",
+      "rule_code": "350",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2023-07-01",
+      "end_date": "2023-12-31",
+      "returned_to_compliance_date": "2024-12-31",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "2098220",
+      "contaminant_code": "5000",
+      "violation_code": "66",
+      "category_code": "MR",
+      "rule_code": "350",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2021-02-05",
+      "end_date": null,
+      "returned_to_compliance_date": "2021-03-22",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     }
+    ],
+    "lead_90th": {
+     "value_mg_l": 0.0,
+     "sample_date": "2026-12-31"
+    }
+   },
+   {
+    "pwsid": "LA1105005",
+    "name": "FLUKER CHAPEL WATER WORKS",
+    "city": "NATALBANY",
+    "state": "LA",
+    "population_served": 296,
+    "match_type": "admin_address",
+    "total_violation_count": 14,
+    "violations": [
+     {
+      "violation_id": "9008830",
+      "contaminant_code": "5200",
+      "violation_code": "2E",
+      "category_code": "TT",
+      "rule_code": "351",
+      "is_health_based": true,
+      "status": "resolved",
+      "begin_date": "2024-10-17",
+      "end_date": null,
+      "returned_to_compliance_date": "2024-12-26",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 2
+     },
+     {
+      "violation_id": "9008829",
+      "contaminant_code": "7500",
+      "violation_code": "75",
+      "category_code": "Other",
+      "rule_code": "410",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2020-04-07",
+      "end_date": null,
+      "returned_to_compliance_date": "2023-05-18",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "9008828",
+      "contaminant_code": "0700",
+      "violation_code": "45",
+      "category_code": "TT",
+      "rule_code": "140",
+      "is_health_based": true,
+      "status": "resolved",
+      "begin_date": "2020-02-25",
+      "end_date": null,
+      "returned_to_compliance_date": "2020-07-07",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 2
+     },
+     {
+      "violation_id": "9008822",
+      "contaminant_code": "2950",
+      "violation_code": "27",
+      "category_code": "MR",
+      "rule_code": "220",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2015-10-01",
+      "end_date": "2016-09-30",
+      "returned_to_compliance_date": "2017-09-20",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     },
+     {
+      "violation_id": "9008820",
+      "contaminant_code": "0999",
+      "violation_code": "27",
+      "category_code": "MR",
+      "rule_code": "210",
+      "is_health_based": false,
+      "status": "resolved",
+      "begin_date": "2015-10-01",
+      "end_date": "2015-12-31",
+      "returned_to_compliance_date": "2016-01-31",
+      "measure": null,
+      "unit": null,
+      "state_mcl": null,
+      "notification_tier": 3
+     }
+    ],
+    "lead_90th": {
+     "value_mg_l": 0.0,
+     "sample_date": "2024-12-31"
+    }
+   }
+  ]
+ }
+}
