@@ -26,7 +26,9 @@ from app.geo import GeoError
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
 ZIP_CSV_PATH = os.path.join(DATA_DIR, "zip_to_city.csv")
 FALLBACK_PATH = os.path.join(DATA_DIR, "fallback.json")
-CACHE_PATH = os.path.join(DATA_DIR, "cache.sqlite3")
+# Vercel's file system is read-only except /tmp, so keep the cache there when deployed.
+CACHE_PATH = ("/tmp/cache.sqlite3" if os.environ.get("VERCEL")
+              else os.path.join(DATA_DIR, "cache.sqlite3"))
 
 CACHE_MAX_AGE_SECONDS = 7 * 24 * 3600
 MAX_SYSTEMS = 10          # more than this is noise for a parent reading the page

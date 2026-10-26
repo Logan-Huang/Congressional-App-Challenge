@@ -24,7 +24,8 @@ from . import epa_client, rules, state_sources
 from .geo import BOUNDARY_URL  # one copy of the EPA boundary-service URL
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
-CACHE_DB = DATA_DIR / "cache.sqlite3"
+# Vercel's file system is read-only except /tmp, so keep the cache there when deployed.
+CACHE_DB = Path("/tmp/cache.sqlite3") if os.environ.get("VERCEL") else DATA_DIR / "cache.sqlite3"
 CACHE_DAYS = 7
 
 MAX_NEIGHBORS = 8
